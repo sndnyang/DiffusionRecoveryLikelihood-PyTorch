@@ -1,10 +1,10 @@
 # Learning Energy-Based Models by Diffusion Recovery Likelihood-PyTorch
 
-A PyTorch Implementation   
+A PyTorch Implementation
 
 Paper: https://arxiv.org/pdf/2012.08125,  official TF2 code: https://github.com/ruiqigao/recovery_likelihood
 
-
+If you find any problems/bugs in my implementation, you can open an issue to point out. Thank you!
 
 ## The reproducibility of official TF code
 
