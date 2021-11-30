@@ -35,6 +35,8 @@ Curves of Some training variables:
 
 # PyTorch Implementation
 
+You can also try  pytorch_difrec.ipynb 
+
 I almost implement the main parts of the algorithm.  
 
 1. for simplicity, I use the Wide-ResNet 28-10 used in [JEM](https://github.com/wgrathwohl/JEM), instead of implementing the ResNet model in the paper.
@@ -48,22 +50,27 @@ I almost implement the main parts of the algorithm.
 ![image-20211129190511239](images/pytorch_fid.png)
 
 
-
 ## Requirements
 
 ```
 pip install -r requirements.txt
 ```
 
+I think all versions of torch >= 1.3.1 can use for it. 
+
+For Inception Score/FID, you need to install tensorflow-gpu, CPU is too slow. 
+
+I suggest to use miniconda or anaconda for evaluation Inception Score [install tensorflow in conda](https://yann-leguilly.gitlab.io/post/2019-10-08-tensorflow-and-cuda/)
+
 ## Train
 
 CIFAR10
 
 ```
-python DRLTrainer.py --num_res_blocks=8 --n_batch_train=256 
+python DRLTrainer.py --gpu-id=? 
 ```
 
-For faster training, reduce the value of `num_res_blocks`.
+Since Wide-Resnet is used,  you can change widen factor and depth factor.  You can also find other architectures for it.
 
 No pretrained models
 
