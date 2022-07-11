@@ -40,7 +40,7 @@ You can also try  pytorch_difrec.ipynb
 I almost implement the main parts of the algorithm.  
 
 1. for simplicity, I use the Wide-ResNet 28-10 used in [JEM](https://github.com/wgrathwohl/JEM), instead of implementing the ResNet model in the paper.
-2. I didn't implement the EMA(Exponential Moving Average used in the code but not mentioned in the paper), which mainly results in a fluctuated/non-smooth FID curve(verified by TF code).
+2. I didn't implement the *EMA*(Exponential Moving Average used in the code but not mentioned in the paper). 1) it may improves the performance by a large margin, 2) it may just results in a fluctuated/non-smooth FID curve(verified by TF code). 
 3. I'm not sure whether the Spectral Norm implementation is correct. I fail to use the SN layer in my code. [SN](https://github.com/christiancosgrove/pytorch-spectral-normalization-gan)
 4. I use the code from [IGEBM](https://github.com/openai/ebm_code_release) to compute FID/Inception Score.  Almost the same but still potentially a bit different from the paper.
 
